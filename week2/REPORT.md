@@ -63,3 +63,18 @@ sorja:~ sorja$ ls | grep 'e' | wc -l
 ```
 #### Interlude: Bash
 [count-homedir.sh](count-homedir.sh)
+
+### Ex. 3
+#### Some assembly required
+[lists-all-files-and-subdirectories-from-November-2011.sh](lists-all-files-and-subdirectories-from-November-2011.sh)
+
+#### Now we want only the pictures
+[lists-all-files-and-subdirectories-from-November-2011-only-jpgs.sh](lists-all-files-and-subdirectories-from-November-2011-only-jpgs.sh)
+
+#### How many do we have to far ?
+[lists-all-files-and-subdirectories-from-November-2011-count-jpgs.sh](lists-all-files-and-subdirectories-from-November-2011-count-jpgs.sh)
+
+#### Remember the backticks
+_Note_ Using the newer ` $() ` convetion instead of backticks ( ` )  
+[amount-of-pics-current-month.sh](amount-of-pics-current-month.sh)
+
