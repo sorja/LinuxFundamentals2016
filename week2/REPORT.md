@@ -78,3 +78,29 @@ sorja:~ sorja$ ls | grep 'e' | wc -l
 _Note_ Using the newer ` $() ` convetion instead of backticks ( ` )  
 [amount-of-pics-current-month.sh](amount-of-pics-current-month.sh)
 
+#### Combine everything
+[lists-all-jpg-files-of-current-month-using-ls.sh](lists-all-jpg-files-of-current-month-using-ls.sh)
+
+### Ex. 4
+#### The big brother of `ls`
+[lists-all-jpg-files-of-current-month-using-find.sh](lists-all-jpg-files-of-current-month-using-find.sh)
+
+### Ex. 5
+#### Introduction to variables
+`$PWD`  
+The current working directory as set by the cd command.  
+`PS1`  
+_The value  of  this parameter is expanded (see PROMPTING below)and used as the primary prompt string.   The  default  value  is``\s-\v\$ ''._  
+For example `sorja:LinuxFundamentals2016 sorja$`  
+`SHELL`  
+_The full pathname to the shell is kept in this environment vari-able.  If it is not set when the shell starts, bash  assigns  toit the full pathname of the current user's login shell._  
+I think this defaults to /bin/bash on most systems
+
+#### Special Shell variables
+[echo.sh](echo.sh)
+
+#### The difference between Bash and Bash
+[variable-visibility.sh](variable-visibility.sh)
+
+#### Remote invocation
+[remote-invocation.sh](remote-invocation.sh)
