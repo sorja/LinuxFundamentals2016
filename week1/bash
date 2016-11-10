@@ -1,0 +1,1 @@
+rsync --stats --archive /cs/home/tkt_cam/public_html/2016/11/10 ~/LinuxFundamentals/Week1/exactumcam.Thursday.2016.11.10
