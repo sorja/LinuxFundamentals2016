@@ -60,6 +60,7 @@ If you want to 'pipe' the output to wc, you should use comma ( `;` ) instead of 
 ```
 sorja:~ sorja$ ls -d */ > bar ; wc -l bar
 ```
+__ty for Nortti about this observation__
 
 #### Filters
 ```
