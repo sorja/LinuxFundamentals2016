@@ -56,6 +56,11 @@ sorja:~ sorja$ wc -l bar
       11 bar
 sorja:~ sorja$
 ```
+If you want to 'pipe' the output to wc, you should use comma ( `;` ) instead of pipe, because the output is not deterministic!
+```
+sorja:~ sorja$ ls -d */ > bar ; wc -l bar
+```
+
 #### Filters
 ```
 sorja:~ sorja$ ls | grep 'e' | wc -l
