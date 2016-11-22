@@ -141,5 +141,6 @@ $ find . -name '*test.txt'
 >\* is expanded by the shell before the command-line is passed to find(1). If there's only 1 item in the directory, then it works. If there's more than one item in the directory, then it fails as the command-line options are no longer correct.
 >[source](https://forums.freebsd.org/threads/29885/)
 
-### Ex. 3
-#### GREP and CUT
+### Ex. 5
+#### The Immelmann
+[hipstafy.sh](hipstafy.sh)
