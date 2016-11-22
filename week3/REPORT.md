@@ -61,3 +61,85 @@ REPORT.md   lost24      proxyConfig
 sorja:week3 sorja$ du -sh lost24/
 974M	lost24/
 ```
+
+### Ex. 3
+#### GREP and CUT
+```bash
+sorja:week3 sorja$ find lost24/monitor/2011.12.25 -name "*temp*" | xargs grep PROCESSOR_ZON | cut -d ' ' -f16 | cut -d '/' -f1 | sort | uniq | tail -r
+31C
+30C
+29C
+28C
+27C
+26C
+25C
+24C
+23C
+22C
+```
+
+#### Don't run with the scissors
+_Note_  
+On OS X you have to use -E instead of -R to get regular expressions
+>      -E      Interpret regular expressions as extended (modern) regular
+>	         expressions rather than basic regular expressions (BRE's).  The
+>	         re_format(7) manual page fully describes both formats.
+
+```bash
+... | sed -E -e 's/ +/,/g'
+```
+
+### Ex. 4
+#### Too long to read
+```bash
+sorja:week3 sorja$ cd lost24/monitor/
+sorja:monitor sorja$ ls */*/hp-temps.txt
+-bash: /bin/ls: Argument list too long
+```
+
+```bash
+sorja:week3 sorja$ find lost24/monitor/2011.11.* -name *temp*
+lost24/monitor/2011.11.01/00:00/hp-temps.txt
+lost24/monitor/2011.11.01/00:05/hp-temps.txt
+lost24/monitor/2011.11.01/00:10/hp-temps.txt
+lost24/monitor/2011.11.01/00:15/hp-temps.txt
+lost24/monitor/2011.11.01/00:20/hp-temps.txt
+lost24/monitor/2011.11.01/00:25/hp-temps.txt
+lost24/monitor/2011.11.01/00:30/hp-temps.txt
+lost24/monitor/2011.11.01/00:35/hp-temps.txt
+lost24/monitor/2011.11.01/00:40/hp-temps.txt
+lost24/monitor/2011.11.01/00:45/hp-temps.txt
+lost24/monitor/2011.11.01/00:50/hp-temps.txt
+lost24/monitor/2011.11.01/00:55/hp-temps.txt
+lost24/monitor/2011.11.01/01:00/hp-temps.txt
+lost24/monitor/2011.11.01/01:05/hp-temps.txt
+lost24/monitor/2011.11.01/01:10/hp-temps.txt
+lost24/monitor/2011.11.01/01:15/hp-temps.txt
+        [ ... output is cut ... ] 
+lost24/monitor/2011.11.30/23:20/hp-temps.txt
+lost24/monitor/2011.11.30/23:25/hp-temps.txt
+lost24/monitor/2011.11.30/23:30/hp-temps.txt
+lost24/monitor/2011.11.30/23:35/hp-temps.txt
+lost24/monitor/2011.11.30/23:40/hp-temps.txt
+lost24/monitor/2011.11.30/23:45/hp-temps.txt
+lost24/monitor/2011.11.30/23:50/hp-temps.txt
+lost24/monitor/2011.11.30/23:55/hp-temps.txt
+sorja:week3 sorja$ find lost24/monitor/2011.11.* -name *temp* | wc -l
+    8640
+```
+#### Escape as a true friend
+_Using the example given_
+```bash
+$ touch footest.txt
+$ find . -name *test.txt
+$ find . -name '*test.txt'
+$ touch bartest.txt
+$ find . -name *test.txt
+# this fails
+$ find . -name '*test.txt'
+```
+>\* is expanded by the shell before the command-line is passed to find(1). If there's only 1 item in the directory, then it works. If there's more than one item in the directory, then it fails as the command-line options are no longer correct.
+>[source](https://forums.freebsd.org/threads/29885/)
+
+### Ex. 3
+#### GREP and CUT
