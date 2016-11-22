@@ -1,0 +1,5 @@
+Host ukko
+  User          sorja
+  HostName      ukko050.hpc.cs.helsinki.fi
+  ProxyCommand  ssh sorja@melkki.cs.helsinki.fi nc %h %p 2> /dev/null
+
