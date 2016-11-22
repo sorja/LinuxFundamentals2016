@@ -11,4 +11,4 @@ time for i in $(find lost24/monitor/2011.11* -name *temps.txt); do
         max_value=$curr_value
     fi
 done
-echo $max_value
+echo "Highest value found: $max_value"
