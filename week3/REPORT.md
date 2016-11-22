@@ -144,3 +144,7 @@ $ find . -name '*test.txt'
 ### Ex. 5
 #### The Immelmann
 [hipstafy.sh](hipstafy.sh)
+
+### Ex. 6
+#### Hottest day
+[hottestday.sh](hottestday.sh)
