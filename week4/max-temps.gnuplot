@@ -1,4 +1,4 @@
-set terminal dumb
+set terminal corel
 
 set xlabel "Date"
 set xdata time
@@ -11,4 +11,8 @@ set yrange [ 20 : 30]
 
 set title 'foo'
 
-plot 'tmp_temperatures.txt' using 1:2
+set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 1.5   # --- blue
+
+set output "printme.eps"
+
+plot 'tmp_temperatures.txt' using 1:2  with linespoints ls 1
