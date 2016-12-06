@@ -55,3 +55,8 @@ bash-3.2$ ./get_date_temp_from_folder.sh ../week3/lost24/monitor/2011.11* > tmp_
 ### Ex. 3
 _Exercise 3 became quite polluted, so the scripts have been moved to own dir_  
 [ex3](ex3)
+
+### Ex. 4
+#### Let's make more refined commands
+[temperatures.sh](temperatures.sh)
+[temperatures.gnuplot](temperatures.gnuplot)
