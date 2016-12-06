@@ -7,14 +7,14 @@ Week 4 report
 
 ### Ex. 2
 #### First Gnuplot script
-[test.gnuplot](test.gnuplot)
+[ex2/test.gnuplot](ex2/test.gnuplot)
 
 #### Plotting data from file
-[create-random-data.sh](create-random-data.sh)  
+[ex2/create-random-data.sh](ex2/create-random-data.sh)  
 ```bash
 bash-3.2$ ./create-random-data.sh 100 > random_numbers.txt
 ```
-generated data: [random_numbers.txt](random_numbers.txt)  
+generated data: [ex2/random_numbers.txt](ex2/random_numbers.txt)  
 _Output_
 ```bash
 gnuplot> plot "random_numbers.txt" using 1:2 w dots title "random numbers"
