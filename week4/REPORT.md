@@ -49,3 +49,8 @@ gnuplot> plot "random_numbers.txt" using 1:2 w dots title "random numbers"
 ```bash
 bash-3.2$ ./get_date_temp_from_folder.sh ../week3/lost24/monitor/2011.11* > tmp_temperatures.txt
 ```
+..and the rest of the scripts/files can be found here  
+[ex2](ex2)
+
+### Ex. 3
+[ex3](ex3)
